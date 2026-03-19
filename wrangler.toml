@@ -6,6 +6,10 @@ compatibility_flags = ["nodejs_compat"]
 [env.production]
 name = "subscription-manager"
 
+[[kv_namespaces]]
+binding = "SUBSCRIPTIONS_KV"			#KV绑定名默认不可修改
+id = "d5f63d626f23421691c18ea76f62d72a"				#KV数据库id
+
 [env.staging]
 name = "subscription-manager-staging"
 
@@ -18,3 +22,4 @@ crons = ["0 * * * *"]
 # 环境变量（可选，也可以在 Cloudflare Dashboard 中设置）
 [vars]
 ENVIRONMENT = "production"
+
